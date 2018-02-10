@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author 微软中国
  *
  */
-
 @SpringBootApplication
 public class DemoApplication {
 	
