@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- @version $Id: log4j.xml. eazytec.com $ -->
+
+<!--- Log4j配置文件。 -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!-- 控制台输出 -->
+    <appender name="DEFAULT-CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{dd HH:mm:ss,SSS\} %-5p] [%t] %c{2\} - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- ================================================================== -->
+    <!-- Root logger -->
+    <!-- ================================================================== -->
+
+    <root>
+        <level value="info"/>
+        <appender-ref ref="DEFAULT-CONSOLE"/>
+    </root>
+
+</log4j:configuration>
+
