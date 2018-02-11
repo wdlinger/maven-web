@@ -27,20 +27,20 @@
         <div>
             <div>
 
-                <h1 class="logo-name">memories</h1>
+                <h1 class="logo-name">RG</h1>
 
             </div>
-            <h3>欢迎注册memories</h3>
-            <p>创建一个memories新账户</p>
-            <form class="m-t" role="form" action="">
+            <h3>欢迎注册</h3>
+            <p>创建一个新账户</p>
+            <form class="m-t" role="form">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="请输入用户名" required="">
+                    <input type="text" id="name" class="form-control" placeholder="请输入用户名" required="">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="请输入密码" required="">
+                    <input type="password" id="password" class="form-control" placeholder="请输入密码" required="">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="请再次输入密码" required="">
+                    <input type="password" id="passwords" class="form-control" placeholder="请再次输入密码" required="">
                 </div>
                 <div class="form-group text-left">
                     <div class="checkbox i-checks">
@@ -48,7 +48,8 @@
                             <input type="checkbox"><i></i> 我同意注册协议</label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">注 册</button>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <button id="save" onclick="save()" class="btn btn-primary block full-width m-b">注 册</button>
 
                 <p class="text-muted text-center"><small>已经有账户了？</small><a href="login.html">点此登录</a>
                 </p>
@@ -56,12 +57,21 @@
             </form>
         </div>
     </div>
-    <script src="js/jquery.min.js?v=2.1.4"></script>
-    <script src="js/bootstrap.min.js?v=3.3.6"></script>
-    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="/resources/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/resources/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="/resources/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="/resources/js/plugins/layer/layer-v3.1.1/layer/layer.js"></script>
     <script>
         $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
     </script>
-    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+<script type="text/javascript">
+	function save() {
+		var password = $("#password").val();
+		var passwords = $("#passwords").val();
+		
+		if (password != passwords){
+		}
+	}
+</script>    
 </body>
 </html>

@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class loginController {
 	
 	@RequestMapping(value = "/",method = RequestMethod.GET)
-    public String toIndex(){
+    public String toLogin(){
         return "login";
+    }
+	
+	@RequestMapping(value = "/register",method = RequestMethod.GET)
+    public String toHello(){
+        return "register";
     }
 }

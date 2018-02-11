@@ -1,13 +1,13 @@
-server:
+server: 
   port: 8080
-spring:
-  mvc:
+spring: 
+  mvc: 
     view: 
 #     prefix: /WEB-INF/page/
       prefix: /
       suffix: .jsp
   datasource:
-    url: jdbc:mysql://localhost:3306/mysql?characterEncoding=utf8&useSSL=false      
+    url: jdbc:mysql://localhost:3306/maven-web?characterEncoding=utf8&useSSL=false      
     driverClassName: com.mysql.jdbc.Driver
     username: root
     password:
@@ -25,13 +25,23 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-    maxOpenPreparedStatements: 20          
-mybatis:
+    maxOpenPreparedStatements: 20
+  jpa:  
+    database : MYSQL  
+    show-sql : true  
+    hibernate:  
+      ddl-auto : update  
+      naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy  
+    properties:  
+      hibernate:  
+        dialect : org.hibernate.dialect.MySQL5Dialect  
+
+mybatis: 
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.wdlinger.model
 
 #pagehelper分页插件
-pagehelper:
+pagehelper: 
     helperDialect: mysql
     reasonable: true
     supportMethodsArguments: true
