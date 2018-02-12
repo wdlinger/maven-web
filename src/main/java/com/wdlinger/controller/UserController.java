@@ -53,7 +53,7 @@ public class UserController {
 	
 	@RequestMapping(value = "/user/isUser", method = RequestMethod.GET)
 	public String isUser(HttpServletRequest request){
-		String user = userDao.getByUserName();
+//		String user = userDao.getByUserName();
 		return null;
 	}
 }
