@@ -9,13 +9,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @EnableAutoConfiguration
 public class loginController {
 	
-	@RequestMapping(value = "/",method = RequestMethod.GET)
-    public String toLogin(){
+	@RequestMapping(value = "/login",method = RequestMethod.GET)
+    public String login(){
         return "login";
     }
 	
 	@RequestMapping(value = "/register",method = RequestMethod.GET)
-    public String toHello(){
+    public String register(){
         return "register";
     }
+	
+	@RequestMapping(value = "/error",method = RequestMethod.GET)
+	public String error(){
+		return "404";
+	}
 }
