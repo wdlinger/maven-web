@@ -42,6 +42,7 @@
                     <input type="password" class="form-control pword m-b" placeholder="密码" />
                     <a href="#">忘记密码了？</a>
                     <strong>还没有账号？ <a href="/register">立即注册&raquo;</a></strong>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <button class="btn btn-success btn-block">登录</button>
                 </form>
             </div>
